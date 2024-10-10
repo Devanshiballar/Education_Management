@@ -44,12 +44,18 @@ const swaggerSpec = swaggerJsdoc(options);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 const userRoutes = require("./routes/userRoutes");
+const AdminRoute= require("./routes/adminRoute")
+const TeacherRoute=require("./routes/teacherRoute")
+const StudentRoute=require("./routes/studentRoute")
 
 app.use("/api/v1", userRoutes);
+app.use("/admin",AdminRoute)
+app.use("/teacher",TeacherRoute)
+app.use("/student",StudentRoute)
 
 app.get("/", (req, res) => {
   res.send(
-    "<center><h1>E-Library Management Api</h1><br>Get Recipe Api <a href=https://github.com/Devanshiballar/E-Library-Management.git target=_blank>Repository :E-Library Management</a></center>"
+    "<center><h1>Education Management Api</h1><br>Get Recipe Api <a href=https://github.com/Devanshiballar/Education_Management.git target=_blank>Repository :Education Management</a></center>"
   );
 });
 
