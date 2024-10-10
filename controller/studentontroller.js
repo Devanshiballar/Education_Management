@@ -1,7 +1,7 @@
-const Course = require("../models/course.model");
+const Course = require("../models/courseModel");
 const Assignment = require("../models/assignmentModel");
 const Enrolment = require("../models/enrollModel");
-const Grade = require("../models/grade.model");
+const Grade = require("../models/gradeModel");
 
 // Enroll in Course
 exports.enrollInCourse = async (req, res) => {

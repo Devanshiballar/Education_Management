@@ -1,7 +1,7 @@
 const Assignment = require("../models/assignmentModel");
 const Quiz = require("../models/quizModel");
 const Enrolment = require("../models/enrollModel");
-const Grade = require("../models/grade.model");
+const Grade = require("../models/gradeModel");
 
 // Upload Assignment
 exports.addAssignment = async (req, res) => {
